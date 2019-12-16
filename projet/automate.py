@@ -235,9 +235,16 @@ class Automate(AutomateBase):
         rend  l'automate acceptant pour langage le complémentaire du langage de a
         """
 
+        auto1 = Automate.determinisation(auto)
+        auto2 = Automate.completeAutomate(auto1, alphabet)
+
+        for s in auto2.listStates :
+            s.fin = not(s.fin)
+        return auto2
 
     @staticmethod
     def intersection (auto0, auto1):
+        """ OBLIGATOIRE """
         """ Automate x Automate -> Automate
         rend l'automate acceptant pour langage l'intersection des langages des deux automates
         """
@@ -245,6 +252,7 @@ class Automate(AutomateBase):
 
     @staticmethod
     def union (auto0, auto1):
+        """ FACULTATIF """
         """ Automate x Automate -> Automate
         rend l'automate acceptant pour langage l'union des langages des deux automates
         """
@@ -253,7 +261,7 @@ class Automate(AutomateBase):
 
 
 
-
+""" CONCATENATION OU ETOILE A FAIRE """
     @staticmethod
     def concatenation (auto1, auto2):
         """ Automate x Automate -> Automate

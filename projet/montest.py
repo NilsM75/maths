@@ -4,7 +4,7 @@ from sp import *
 from transition import *
 from automateBase import *
 from automate import *
-
+"""
 #-----------------------Automate A-----------------------
 #-----------------------Automate A-----------------------
 #-----------------------Automate A-----------------------
@@ -27,6 +27,8 @@ aListe_trans = [aTransition0,aTransition1,aTransition2,aTransition3]
 aAutomate = Automate(aListe_trans)
 aAutomateComplete = Automate(aListe_trans)
 aAutomateDeter = Automate(aListe_trans)
+aAutomateComplementaire = Automate(aListe_trans)
+
 
 print(aAutomate)
 aAutomate.show("automateA")
@@ -70,14 +72,18 @@ print("----------completeAutomate----------")
 print("Voici l'automate complété :")
 print(Automate.completeAutomate(aAutomateComplete,"ab"))
 
-
 #determinisation
 print("\n")
 print("----------determinisation----------")
 print("Voici l'automate determinisé :")
 print(Automate.determinisation(aAutomateDeter))
 
-
+#complementaire
+print("\n")
+print("----------complementaire----------")
+print("Voici l'automate complementaire :")
+print(Automate.complementaire(aAutomateComplementaire,"ab"))
+"""
 #-----------------------Automate B-----------------------
 #-----------------------Automate B-----------------------
 #-----------------------Automate B-----------------------
@@ -107,6 +113,7 @@ bListe_trans = [bTransition0,bTransition1,bTransition2,bTransition3,bTransition4
 bAutomate = Automate(bListe_trans)
 bAutomateComplete = Automate(bListe_trans)
 bAutomateDeter = Automate(bListe_trans)
+bAutomateComplementaire = Automate(bListe_trans)
 
 print(bAutomate)
 bAutomate.show("automateB")
@@ -161,8 +168,14 @@ print("Voici l'automate determinisé :")
 print(Automate.determinisation(bAutomateDeter))
 Automate.determinisation(bAutomateDeter).show("DeterAutomateB")
 
+#complementaire
+print("\n")
+print("----------complementaire----------")
+print("Voici l'automate complementaire :")
+print(Automate.complementaire(bAutomateComplementaire,"ab"))
+Automate.complementaire(bAutomateComplementaire,"ab").show("ComplementaireAutomateB")
 
-
+"""
 #-----------------------Automate C-----------------------
 #-----------------------Automate C-----------------------
 #-----------------------Automate C-----------------------
@@ -190,6 +203,7 @@ cListe_trans = [cTransition0,cTransition1,cTransition2,cTransition3,cTransition4
 cAutomate = Automate(cListe_trans)
 cAutomateComplete = Automate(cListe_trans)
 cAutomateDeter = Automate(cListe_trans)
+cAutomateComplementaire = Automate(cListe_trans)
 
 print(cAutomate)
 cAutomate.show("automateC")
@@ -248,6 +262,12 @@ print("Voici l'automate determinisé :")
 print(Automate.determinisation(cAutomateDeter))
 Automate.determinisation(cAutomateDeter).show("DeterAutomateC")
 
+#complementaire
+print("\n")
+print("----------complementaire----------")
+print("Voici l'automate complementaire :")
+print(Automate.complementaire(cAutomateComplementaire,"abc"))
+
 #-----------------------Automate D-----------------------
 #-----------------------Automate D-----------------------
 #-----------------------Automate D-----------------------
@@ -273,6 +293,7 @@ dListe_trans = [dTransition0,dTransition1,dTransition2]
 dAutomate = Automate(dListe_trans)
 dAutomateComplete = Automate(dListe_trans)
 dAutomateDeter = Automate(dListe_trans)
+dAutomateComplementaire = Automate(dListe_trans)
 
 print(dAutomate)
 dAutomate.show("automateD")
@@ -320,11 +341,19 @@ print("\n")
 print("----------completeAutomate----------")
 print("Voici l'automate complété :")
 print(Automate.completeAutomate(dAutomateComplete,"abc"))
-Automate.completeAutomate(dAutomateComplete,"ab").show("CompletAutomateD")
+Automate.completeAutomate(dAutomateComplete,"abc").show("CompletAutomateD")
 
 #determinisation
 print("\n")
 print("----------determinisation----------")
 print("Voici l'automate determinisé :")
 print(Automate.determinisation(dAutomateDeter))
-#          Automate.determinisation(dAutomateDeter).show("DeterAutomateD")
+Automate.determinisation(dAutomateDeter).show("DeterAutomateD")
+
+#complementaire
+print("\n")
+print("----------complementaire----------")
+print("Voici l'automate complementaire :")
+print(Automate.complementaire(dAutomateComplementaire,"abc"))
+Automate.complementaire(dAutomateComplementaire,"abc").show("ComplementaireAutomateD")
+"""
